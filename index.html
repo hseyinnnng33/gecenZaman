@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Anton&family=Asap&family=Black+Han+Sans&family=Faster+One&family=Inter&family=Lexend+Deca:wght@600&family=Manrope&family=Nosifer&family=Orienta&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,900&family=Russo+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+}
+
+html{
+    background-color: #f1f2f3;
+}
+
+#genel{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    background-color: #f1f2f3;
+}
+
+nav{
+    width: 100%;
+    height: 100px;
+    background-color: #fff;
+}
+
+nav .icerik{
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.icerik a{
+    text-decoration: none;
+}
+
+.icerik a img{
+    border-radius: 5px;
+    animation: dondur 2s linear infinite;
+}
+
+@keyframes dondur {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-4px);
+    }
+}
+
+header{
+    max-width: 800px;
+    margin: 10px auto;
+    background-color: #fff;
+    height: 150px;
+    border-radius: 5px;
+}
+
+header .icerik{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+header .icerik h2{
+    font-size: 25px;
+}
+
+.saatBar{
+    max-width: 800px;
+    height: 60px;
+    margin: 0 auto;
+    background-color: #2ecc71;
+    border-radius: 5px;
+}
+
+.saatBar .icerik{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.saatBar .icerik h2{
+    color: #fff;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+}
+
+h2 span{
+    margin: 0 2px;
+    font-size: 17px;
+}
+
+.saatBar .icerik h2 .saniye{
+    display: block;
+    width: 22px;
+    text-align: center;
+}
+
+.kartlar{
+    max-width: 800px;
+    margin: 10px auto;
+}
+
+.kartlar .icerik{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.icerik .kart-1{
+    width: 100%;
+    border-radius: 5px;
+    margin: 10px 0;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.kart-1 img{
+    border-radius: 10px;
+}
+
+.kart-1 p{
+    margin: 20px 0;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.saatBar.active{
+    margin: 32px auto;
+    padding: 20px;
+    text-align: center;
+    font-size: 20px;
+    position: fixed;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    z-index: 10;
+}
+
+.bilgiler{
+    display: flex;
+    align-items: center;
+}
+
+.kart-1  h2{
+    font-size: 20px;
+}
+
+main{
+    max-width: 1000px;
+    margin: 20px auto;
+    background-color: #fff;
+}
+
+.aciklama{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aciklama h2{
+    margin: 20px 0;
+    font-size: 20px;
+    text-align: center;
+}
+
+main .kartlar-proje{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+main .kartlar-proje .proje{
+    width: 450px;
+    border: 2px solid #333;
+    padding: 10px;
+    margin: 5px;
+    transition: .2s ease;
+    border-radius: 10px;
+}
+
+main .kartlar-proje .proje:hover{
+    transform: translateY(-5px);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+main .kartlar-proje .proje a{
+    text-decoration: none;
+}
+
+main .kartlar-proje .proje a img{
+    width: 100%;
+}
+
+
+@media only screen and (max-width: 1000px) {
+    html,body{
+        overflow-x: hidden;
+    }
+
+    nav .icerik{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header{
+        width: 95%;
+    }
+
+    header .icerik h2{
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .saatBar .icerik h2{
+        color: #fff;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    h2 span{
+        margin: 0 2px;
+        font-size: 16px;
+    }
+    
+    .icerik .kart-1{
+        width: 95%;
+        border-radius: 5px;
+        margin: 10px 0;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        text-align: center;
+    }
+    
+    .kart-1 img{
+        width: 100%;
+    }
+
+    main .kartlar-proje .proje{
+        width: 450px;
+        border: 2px solid #333;
+        padding: 10px;
+        margin: 10px;
+        transition: .2s ease;
+        border-radius: 10px;
+    }
+
+    main{
+        margin-bottom: 60px;
+    }
+
+    .saatBar.active{
+        margin: 32px auto;
+        padding: 20px;
+        text-align: center;
+        font-size: 20px;
+        position: fixed;
+        top: 0%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 95%;
+        z-index: 10;
+    }
+
+    .saatBar{
+        width: 95%;
+    }
+
+}
+    </style>
+</head>
+<body>
+
+    <div id="genel">
+
+
+        <nav>
+            <div class="icerik">
+                <a href="">
+                    <img src="resimler/trigoter.png" alt="">
+                </a>
+            </div>
+        </nav>
+
+
+        <header>
+            <div class="icerik">
+                <h2>Ne Kadar Hızlı Hareket Ediyoruz?</h2>
+            </div>
+        </header>
+
+        <div class="saatBar">
+            <div class="icerik">
+                <h2 class="h2Parent">Siteye girdiğinden beri <span class="dk"></span><span class="saniye"></span>Saniye Geçti</h2>
+            </div>
+        </div>
+
+
+        <div class="kartlar">
+            <div class="icerik">
+
+                <div class="kart-1">
+                    <img src="https://neal.fun/speed/tectonic-plates.jpg" alt="resim">
+                    <p>Tektonik plakalar yılda yaklaşık 2 inç hareket eder. Bu sayfayı açtığınızdan beri seyahat ettiğiniz anlamına gelir.</p>
+                    <h2 class="nano"></h2>
+                </div>
+
+                <div class="ara-kart">
+                    <h2>Ama bekle...</h2>
+                </div>
+                
+
+                <div class="kart-1">
+                    <img src="https://neal.fun/speed/earth-spinning.jpg" alt="resim">
+                    <p>Dünya ekvatorda yaklaşık 1.000 mil hızla dönüyor. Bu, sayfayı açtığınızdan beri dolaştığınız anlamına gelir.</p>
+                    
+                    <div class="bilgiler">
+                        <h2 class="miles"></h2>
+                        <h2 class="milesSpan"></h2>
+                        <h2 style="margin-left: 5px;">Mil</h2>
+                    </div>
+                </div>
+
+                <div class="ara-kart">
+                    <h2>Ama bekle...</h2>
+                </div>
+
+
+                <div class="kart-1">
+                    <img src="https://neal.fun/speed/earth-orbit.jpg" alt="resim">
+                    <p>Dünya aynı zamanda güneşin etrafında 66.000 mil hızla dönüyor! Yani seyahatiniz dünyanın dönüşüyle ​​​​birleşti.</p>
+                    
+                    <div class="bilgiler">
+                        <h2 class="gunesMil"></h2>
+                    </div>
+                </div>
+
+                <div class="ara-kart">
+                    <h2>Ama bekle...</h2>
+                </div>
+
+                <div class="kart-1">
+                    <img src="https://neal.fun/speed/local-group.jpg" alt="resim">
+
+                    <p>Komşu yıldızlarla karşılaştırıldığında güneşimiz saatte 43.000 mil hızla Vega adlı yerel bir yıldıza doğru ilerliyor! Böylece, Dünya'nın dönmesi ve Dünya'nın Güneş'in etrafında dönmesiyle birlikte seyahat etmiş olursunuz.</p>
+                    
+                    <div class="bilgiler">
+                        <h2 class="yildizMil"></h2>
+                    </div>
+                </div>
+
+                <div class="ara-kart">
+                    <h2>Ama bekle...</h2>
+                </div>
+
+                <div class="kart-1">
+                    <img src="https://neal.fun/speed/milky-way-orbit.jpg" alt="resim">
+
+                    <p>Güneş, Samanyolu Galaksisi'nin etrafında 483.000 mil hızla dönüyor! Böylece, Dünya'nın dönmesi ve Dünya'nın Güneş'in etrafında dönmesiyle birlikte aslında seyahat etmiş olursunuz.</p>
+                    
+                    <div class="bilgiler">
+                        <h2 class="yildiBigMil"></h2>
+                    </div>
+                </div>
+
+
+                <div class="ara-kart">
+                    <h2>Ama bekle...</h2>
+                </div>
+
+                <div class="kart-1">
+                    <img src="https://neal.fun/speed/andromeda.jpg" alt="resim">
+                    
+                    <p>Samanyolu Galaksisi, saatte 225.000 mil hızla Andromeda Galaksisiyle çarpışma rotasında!</p>
+                    
+                    <div class="bilgiler">
+                        <h2 class="carpisMil"></h2>
+                    </div>
+                </div>
+
+
+                <div class="ara-kart">
+                    <h2>Ama bekle...</h2>
+                </div>
+
+                <div class="kart-1">
+                    <img src="https://neal.fun/speed/universe.jpg" alt="resim">
+                    
+                    <p>Evren genişliyor! Bilinen en uzak galaksinin görüş noktasından seyahat ettiğiniz anlamına gelir.</p>
+                    
+                    <div class="bilgiler">
+                        <h2 class="enMil"></h2>
+                    </div>
+                </div>
+
+
+                <div class="ara-kart">
+                    <h2>Ama bekle...</h2>
+                </div>
+
+                <div class="kart-1">
+                    <img src="https://neal.fun/speed/still.jpg" alt="resim">
+                    
+                    <p style="text-align: center;">Yaşamın hızlı akışı, her anı dolu dolu yaşama cesaretini ve isteğini beslemelidir. Zamanı boşa harcamak yerine, tutkularını keşfet ve hayallerini gerçeğe dönüştürmek için adım at. Değişim ve ilerleme, harekete geçmekle mümkündür.</p>                    
+                </div>
+
+            </div>
+        </div>
+
+
+        <main>
+            <div class="aciklama">
+                <h2>İlginiz için teşekkürler. Biraz daha Trigoter'da takılmaya ne dersin?</h2>
+            </div>
+            <div class="kartlar-proje">
+
+                <div class="proje">
+                    <a href="https://trigoter100.com/kagit-katlama/index.html">
+                        <img src="resimler/kagit-katlama.jpeg" alt="resim">
+                    </a>
+                </div>
+
+                <div class="proje">
+                    <a href="https://trigoter100.com/oylama-sitesi/index.html">
+                        <img src="resimler/oylamaKapak.jpeg" alt="resim">
+                    </a>
+                </div>
+
+                <div class="proje">
+                    <a href="https://trigoter100.com/music-app/index.html">
+                        <img src="resimler/music-app.jpeg" alt="resim">
+                    </a>
+                </div>
+
+                <div class="proje">
+                    <a href="https://trigoter100.com/50-gun-projeler/life-check/index.html">
+                        <img src="resimler/yapilacaklar.jpeg" alt="resim">
+                    </a>
+                </div>
+
+            </div>
+        </main>
+
+
+    </div>
+
+
+    <script>
+        const h2Parent = document.querySelector(".dk")
+const saniye = document.querySelector(".saniye")
+
+let dakikaYarat = document.createElement("span")
+
+
+let index = 0;
+let dakikaSayac = 0;
+
+const guncelle = () =>{
+    index++;
+    saniye.innerHTML = index;
+
+    if(index == 60){
+        index = 0;
+        h2Parent.appendChild(dakikaYarat)
+        dakikaSayac++;
+        dakikaYarat.innerHTML = `${dakikaSayac} Dakika`;
+    }
+}
+
+setInterval(guncelle, 1000)
+
+
+
+
+const nanoHtml = document.querySelector(".nano")
+let nanoSayac = 0;
+const nanoFunc = () =>{
+    nanoSayac++;
+    nanoHtml.innerHTML = `${nanoSayac} Nano-metre`
+}
+setInterval(nanoFunc, 600)
+
+
+
+const milesHtml = document.querySelector(".miles")
+const milesSpanHtml = document.querySelector(".milesSpan")
+let mileSayac = 0;
+let mileSayacSpan = 0;
+
+const milesFunc = () =>{
+    mileSayacSpan++;
+    milesSpanHtml.innerHTML = mileSayacSpan;
+    
+
+    if(mileSayacSpan == 9){
+        mileSayacSpan = 0;
+        mileSayac++;
+        
+        
+        milesHtml.innerHTML = `${mileSayac}.`;
+        milesSpanHtml.innerHTML = `${mileSayacSpan}`;
+        
+    }
+}
+setInterval(milesFunc, 400)
+
+
+const gunesMil = document.querySelector(".gunesMil")
+let gunesSayac = 0;
+const gunesFunc = () =>{
+    gunesSayac++;
+    gunesMil.innerHTML = `${gunesSayac} Km`
+}
+setInterval(gunesFunc, 50)
+
+
+const yildizMil = document.querySelector(".yildizMil")
+let yildizSayac = 0;
+const yildizFunc = () =>{
+    yildizSayac++;
+    yildizMil.innerHTML = `${yildizSayac} Km`;
+}
+setInterval(yildizFunc, 40)
+
+
+const yildiBigMil = document.querySelector(".yildiBigMil")
+let yildizBigSayac = 0;
+const yildizBigFunc = () =>{
+    yildizBigSayac++;
+    yildiBigMil.innerHTML = `${yildizBigSayac} Km`;
+}
+setInterval(yildizBigFunc, 30)
+
+
+const carpisMil = document.querySelector(".carpisMil")
+let carpisMilSayac = 0;
+const carpisMilFunc = () =>{
+    carpisMilSayac++;
+    carpisMil.innerHTML = `${carpisMilSayac} Km`;
+}
+setInterval(carpisMilFunc, 20)
+
+const enMil = document.querySelector(".enMil")
+let enMilSayac = 0;
+const enMilSayacFunc = () =>{
+    enMilSayac++;
+    enMil.innerHTML = `${enMilSayac} Km`;
+}
+setInterval(enMilSayacFunc, 0.1)
+
+
+const saatBar = document.querySelector(".saatBar");
+const initialOffsetTop = saatBar.getBoundingClientRect().top + window.scrollY;
+
+window.addEventListener('scroll', () => {
+  if (window.pageYOffset >= initialOffsetTop) {
+    saatBar.classList.add("active")
+    saatBar.scrollIntoView({behavior: "smooth"})
+  } else {
+    saatBar.classList.remove("active")
+  }
+});
+
+    </script>
+</body>
+</html>
